@@ -1,1 +1,42 @@
+/// factorial of number
+int  factFuction(int n){
+	int fact=1;
+	for(int i=1; i<=n; i++){
+		fact=fact*i;
+	}
+	return fact;
+}
 
+int main(){
+	int n;
+	cout<<"enter the value of num"<<endl;
+	cin>>n;
+	cout<<" fact of number:"<<factFuction(n)<<endl;
+}
+
+//// calculates the sum of the digits of a numbe
+
+int sumOfDigits(int num) {
+    int sum = 0;
+    while (num > 0) {
+        sum += num % 10;  
+        num /= 10;        
+    }
+    return sum;
+}
+
+int main() {
+    int number;
+    
+    cout << "Enter a number: ";
+    cin >> number;
+
+    
+    if (number < 0) {
+        number = -number;
+    }
+
+    cout << "Sum of digits: " << sumOfDigits(number) << endl;
+
+    return 0;
+}
